@@ -1,3 +1,6 @@
+"""
+เส้นทางคาเฟ่ จังหวัดปราจีนบุรี
+"""
 import networkx as nx
 import matplotlib.pyplot as plt
 from itertools import permutations
@@ -91,9 +94,7 @@ def draw_shortest_path(path, total_distance):
         "E":(7,1.2), "F":(4,4), "G":(3,-4), "H":(5,-5), "I":(3,2)
     }
 
-    # Set node and edge colors
-    destination_set = set(destinations)  # เซตของจุดหมาย
-
+    destination_set = set(destinations) 
     node_colors = [
         "pink" if node == path[0] else 
         "skyblue" if node in destination_set or node == destinations[-1] else
