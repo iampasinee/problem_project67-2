@@ -95,8 +95,8 @@ def draw_shortest_path(path, total_distance):
     destination_set = set(destinations)  # เซตของจุดหมาย
 
     node_colors = [
-        "pink" if node == path[0] else 
-        "skyblue" if node in destination_set or node == destinations[-1] else
+        "pink" if node == path[0] or node == destinations[-1] else
+        "pink" if node in destination_set else
         "lightgreen" if node in path else
         "lightgray"
         for node in G.nodes()
